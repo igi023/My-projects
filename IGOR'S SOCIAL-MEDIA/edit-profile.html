@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="edit-profile.css">
+    <title>Edit Profile</title>
+</head>
+<body>
+
+    <a href="mainpage.html" aria-label="ChatterBox main page">
+        <div class="logo">
+            <span style="color: #3dd2e2;">Chatter</span><span style="color: #ff1493;">Box</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><defs><style>.cls-1{fill:#6fabe6}.cls-2{fill:#82bcf4}.cls-3{fill:#db5669}.cls-4{fill:#f26674}.cls-7{fill:#f6ccaf}.cls-8{fill:#ffdec7}.cls-11{fill:#edebf2}</style></defs><g id="Convertasion"><path class="cls-1" d="M42 4v15l-5-2H27a3 3 0 0 1-3-3V4a3 3 0 0 1 2-2.82C26.66.92 26 1 39 1a3 3 0 0 1 3 3z"/><path class="cls-2" d="M42 4v11H30a4 4 0 0 1-4-4V1.18A2.77 2.77 0 0 1 27 1h12a3 3 0 0 1 3 3z"/><path class="cls-3" d="M24 6c0 10.73.07 10.34-.18 11A3 3 0 0 1 21 19H11l-5 2V6a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3z"/><path class="cls-4" d="M24 6c0 10.73.07 10.34-.18 11H12a4 4 0 0 1-4-4V3.18A2.77 2.77 0 0 1 9 3h12a3 3 0 0 1 3 3z"/>
+            <path d="M43 30v9.54H29V30a7 7 0 1 1 14 0z" style="fill:#a87e6b"/><path d="M43 30v9.54H31V30a7 7 0 0 1 6-6.92A7 7 0 0 1 43 30z" style="fill:#be927c"/><path class="cls-3" d="M41 39a4 4 0 0 1 4 4v4H27v-4a4 4 0 0 1 4-4z"/><path class="cls-4" d="M45 43v2H31a2 2 0 0 1-2-2c0-1.32-.11-2.65 1.28-3.93C30.84 39 41.1 39 41 39a4 4 0 0 1 4 4z"/><path class="cls-1" d="M21 43v4H3v-4a4 4 0 0 1 3.28-3.93C6.78 39 6.56 39 17 39a4 4 0 0 1 4 4z"/><path class="cls-2" d="M21 43v2H7a2 2 0 0 1-2-2c0-1.32-.11-2.65 1.28-3.93C6.84 39 17.1 39 17 39a4 4 0 0 1 4 4z"/><path class="cls-7" d="M16 29c0 3.62.36 5.41-1.28 6.93A4 4 0 0 1 8 33v-4z"/><path class="cls-8" d="M16 29c0 3.62.36 5.41-1.28 6.93A4 4 0 0 1 10 32v-3z"/><path d="M16 27v2H8c0-2.24.1-1.78-1-4h7a2 2 0 0 1 2 2z" style="fill:#374f68"/><path d="M16 27H9.91A10.39 10.39 0 0 0 9 25h5a2 2 0 0 1 2 2z" style="fill:#425b72"/><path class="cls-7" d="M40 30c-.56 3.93-.49 4.93-1.55 6a3.45 3.45 0 0 1-5.87-2L32 30a3.25 3.25 0 0 0 3-2 6.84 6.84 0 0 0 5 2z"/><path class="cls-8" d="M40 30c-.56 3.93-.49 4.93-1.55 6a3.46 3.46 0 0 1-3.87-3c-.77-5.33-.72-2.85.42-5a6.84 6.84 0 0 0 5 2z"/><path class="cls-7" d="M38 36.36V39l-2 2-2-2v-2.64h4zM14 36.46V39l-2 2-2-2v-2.54h4z"/><path class="cls-8" d="M14 36.46V39l-1.5 1.5L11 39v-2.54h3zM38 36.36v2.54l-1.5 1.5-1.5-1.5v-2.54h3z"/>
+            <path class="cls-11" d="M20 8H10a1 1 0 0 1 0-2h10a1 1 0 0 1 0 2zM20 16H10a1 1 0 0 1 0-2h10a1 1 0 0 1 0 2zM20 12H10a1 1 0 0 1 0-2h10a1 1 0 0 1 0 2zM38 6H28a1 1 0 0 1 0-2h10a1 1 0 0 1 0 2zM38 14H28a1 1 0 0 1 0-2h10a1 1 0 0 1 0 2zM38 10H28a1 1 0 0 1 0-2h10a1 1 0 0 1 0 2z"/></g></svg>
+        </div>
+    </a>
+    
+    
+
+    <input type="file" id="file-upload" accept="image/*"  style="display: none;">
+
+    <div class="editprofile">
+        <div class="profilepic">
+            <img src="Images/maleuser.png" alt="" id="profilePicture">
+        </div>
+        <p class="edit-text" id="edit-profile-picture-text">Edit profile picture</p>
+    </div>
+    
+    <div id="edit-options" class="edit-popup">
+        <ul>
+            <li id="upload-new">
+                <label for="file-upload">
+                    <i class="icon-upload"></i> Upload new profile picture
+                </label>
+            </li>
+            <li id="remove-picture">
+                <i class="icon-remove"></i> Remove current picture
+            </li>
+        </ul>
+    </div>
+    
+    <p id="message" style="color: rgb(6, 114, 6);"></p>
+
+    <hr>
+    
+
+
+
+    <form id="edit-profile-form">
+        <!-- Username Field -->
+        <div class="form-group">
+            <input type="text" name="username" id="edit-username" disabled>
+            <span class="edit-label" onclick="enableEditing('edit-username')">Edit</span>
+        </div>
+    
+        <!-- Email Field -->
+        <div class="form-group">
+            <input type="email" name="email" id="edit-email" disabled>
+            <span class="edit-label" onclick="enableEditing('edit-email')">Edit</span>
+        </div>
+    
+        <!-- Password Field -->
+        <div class="form-group password-field">
+            <input type="password" name="password" id="edit-password" disabled>
+            <span class="edit-label" onclick="enableEditing('edit-password')">Edit</span>
+            <span class="toggle-password" onclick="togglePassword('edit-password')">&#128065;</span>
+        </div>
+    
+        <!-- Repeat Password Field -->
+        <div class="form-group password-field">
+            <input type="password" name="repeat-password" id="repeat-password" disabled>
+            <span class="edit-label" onclick="enableEditing('repeat-password')">Edit</span>
+            <span class="toggle-password" onclick="togglePassword('repeat-password')">&#128065;</span>
+        </div>
+    
+        <!-- Submit Button -->
+        <button type="submit">Save Changes</button>
+    </form>
+    
+    
+    
+
+<script src="js/editprofile.js"></script> 
+<script src="js/Session.js"></script>
+<script src="js/Users.js"></script>
+</body>
+</html>

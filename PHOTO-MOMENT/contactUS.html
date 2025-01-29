@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="contactUS.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <title>CONTACT-US-PAGE</title>
+</head>
+<body>
+    <div class="mainDiv">
+        <a href="Home.html"><img src="img/LOGO2.JPG" alt="img/logo2"></a>
+
+        <div class="pic1">
+            <div class="textOverlay lined-text">
+                <h1>CONTACT-US:</h1>
+                <p> We would love to hear from you! Whether you have a question about our services, 
+                    pricing, or anything else, our team is ready to answer all your questions.</p>
+            </div> 
+
+            <div class="fonts">
+                <p>VISIT-US ON SOCIAL MEDIA:</p>
+                <a href="#"><i class="fa-brands fa-facebook animate__animated animate__wobble"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram animate__animated animate__wobble"></i></a>
+            </div>   
+
+            <div class="container">
+                <form action="https://formsubmit.co/makaibea97@gmail.com" method="POST">
+                    <div class="form-group">
+                        <label for="name">Name and Last name:</label>
+                        <input id="name_lastname" type="text" name="name" required>
+                        <ul id="name_error"></ul>
+                    </div>
+                
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input id="email" type="email" name="email" required>
+                        <ul id="email_error"></ul>
+                    </div>
+                
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                        <ul id="message_error"></ul>
+                    </div>
+                
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </div>   
+    </div>
+    <script src="contactUs.js"></script>
+</body>
+</html>

@@ -1,0 +1,945 @@
+ * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+
+body{
+    background-color: rgb(230, 235, 232) !important;
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    height: 100%; 
+    width: 100vw;
+    overflow-y: auto; 
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+    
+    
+}
+
+header{
+    width: 100%;
+    height:150px;
+    position: relative;
+}
+
+
+
+
+header .logo{
+    position: absolute;
+    left: 100px;
+
+}
+
+
+header span{
+    font-size: 20px;
+}
+
+header svg{
+    height: 70px;
+    display: block;
+    margin-left: 15px;
+
+}
+
+header h1{
+    text-align: center;
+    padding-top: 100px;
+    font-size: 30px;
+    text-decoration: underline;
+
+
+}
+
+
+.picbackground {
+    display: none;
+    position: relative; /* Omogućava apsolutno pozicioniranje unutrašnjih elemenata */
+    padding: 20px; /* Dodaje osnovno rastojanje unutar pozadine *
+}
+
+.x {
+    position: absolute; /* Fiksira dugme "X" u gornji desni ugao */
+    top: 10px;
+    right: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.title {
+    margin-top: 50px; /* Pomeranje naslova naniže */
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.option {
+    margin-top: 20px; /* Pomeranje opcija naniže */
+}
+
+.label {
+    margin-bottom: 10px; /* Razmak između labela i elemenata ispod njih */
+    text-align: center;
+    font-size: 1rem;
+}
+
+
+
+
+
+
+
+#singinButton {
+    position: absolute;
+    right: 80px;
+    top: 20px;
+    background-color: #87CEEB;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: black;
+    height: auto;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#singinButton:hover {
+    background-color: #2354e4;
+    color: #f2f4f7;
+}
+
+#singinButton svg {
+    width: 24px;
+    height: 24px;
+}
+
+#singinButton svg:hover {
+    fill: #f2f4f7;
+}
+
+
+
+
+
+
+.MyAccount {
+    position: absolute;
+    right: 80px;
+    top: 20px;
+    background-color: #87CEEB;
+    border-color: #87CEEB;
+    border-radius: 5px;
+    padding: 5px;
+    box-shadow: 2px 2px grey;
+}
+
+.MyAccount:hover {
+    background-color: #2557ed;
+}
+
+.options-container {
+    position: relative;
+}
+
+.options {
+    list-style: none;
+    padding: 0;
+    margin: auto;
+    position: absolute;
+    top: 60px;
+    right: 70px;
+    width:20%;
+    background-color: slategray;
+    border: 2px solid grey;
+    border-radius: 10px;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.5s ease, max-height 0.5s ease;
+}
+
+.options .out{
+    position: absolute;
+    top: 10px; 
+    right: 20px;
+    cursor: pointer; 
+    font-size: 20px; 
+    font-weight: bold; 
+    color: white; 
+     background-color: rgba(0, 0, 0, 0.5); 
+    width: 20px; 
+    height: 20px; 
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    border-radius: 50%; 
+    border: 2px solid rgb(239, 239, 239);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+
+
+}
+
+
+
+.options.show {
+    opacity: 1;
+    max-height: 500px;
+}
+
+
+.dynamic-content {
+    font-size: 1.2em; /* Povećava veličinu fonta */
+    font-weight: bold; /* Čini tekst debljim */
+    color: #031e3b; /* Plava boja */
+    font-family: 'Georgia', serif; /* Promenjeni font */
+    margin-left: px;
+}
+
+
+
+.options li {
+    margin:0 0 10px 10px;
+    color: white;
+    border-bottom: 1px solid grey;
+}
+
+
+
+.options li.open:hover {
+    background-color: rgb(182, 176, 176);
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.options li.profile {
+    border-radius: 50%;
+    border: 3px solid rgb(183, 183, 183);
+    width: 70px;
+    height: 70px;
+    margin: auto;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; 
+}
+
+.profile-li-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 50%; 
+}
+
+
+.options li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    
+}
+
+.options li a:hover {
+    background-color: rgb(182, 176, 176);
+    border-radius: 20px;
+   
+    
+}
+
+
+
+
+
+
+
+.searchePart {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    height: 400px; 
+    justify-content: center; 
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; 
+}
+
+.search-container input {
+    padding: 10px;
+    border: 3px solid #ccc;
+    border-right: none;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+    font-size: 16px;
+    width: 600px;
+}
+
+
+.search-container input:focus
+{
+    border-color: #007bff !important;
+
+
+}
+
+
+.search-container input:hover{
+    border-color: #007bff;
+
+
+}
+
+
+.search-container button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 15px;
+    border: 2px solid #ccc;
+    border-radius: 0 4px 4px 0;
+    background-color: #87CEEB;
+    color: white;
+    cursor: pointer;
+}
+
+
+.search-container button:hover {
+    background-color:#2557ed ;
+
+
+
+}
+
+
+
+
+.Gender {
+    border: 3px solid rgb(67, 65, 65);
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 5px;
+    width: 180px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+
+.male, .female {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.5s ease;
+    border-radius: 5px;
+}
+
+
+.male:hover {
+    background-color: blue;
+    cursor: pointer;
+}
+
+.female:hover {
+    background-color: rgb(216, 7, 42);
+    cursor: pointer;
+}
+
+
+
+.Gender::before {
+    content: "";
+    width: 2px;
+    height: 100%;
+    background-color: rgb(67, 65, 65);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+
+
+.languages {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    padding: 10px;
+    gap: 5px;
+    background-color: #f8f9fa;
+    border: 3px solid rgb(67, 65, 65);
+    border-radius: 5px;
+} 
+
+.languages span {
+    font-weight: 500;
+    padding: 6px 8px;
+    background-color: #ffffff; 
+    border: 1px solid #ccc; 
+    border-radius: 3px; 
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.languages span:hover {
+    background-color: #007bff; 
+    color: #ffffff; 
+}
+
+.languages span:active {
+    background-color: #0056b3; 
+    color: #ffffff; 
+}
+
+
+
+.userPart {
+    width: 75%;
+    height: 200px;
+    border-radius: 30px;
+    border: 3px solid rgb(67, 65, 65);
+    background-color: #ffffff;
+    margin: auto;
+    margin-bottom: 30px;
+    position: relative;
+    display: flex;
+    justify-content: end;
+    align-items: center; /* Cini da elementi budu poravnati vertikalno unutar .userPart */
+}
+.userPart img{
+ background-color: #a8a5a5;
+
+}
+
+/* Sadrži obe ikone i omogućava lakše postavljanje */
+.icon-container {
+    display: flex;
+    gap: 20px; /* Razmak između ikona */
+    margin-right: 20px; /* Doda razmak između ikona i desnog kraja */
+}
+
+.phone, .message {
+    font-size: 24px; 
+    color: #333; 
+    border: 2px solid black;
+    display: flex; /* Korišćenje flex-a da ikone budu centrirane */
+    align-items: center; /* Vertikalno centriranje ikona */
+    justify-content: center; /* Horizontalno centriranje ikona */
+    width: 50px; /* Širina ikone */
+    height: 50px; /* Visina ikone */
+    border-radius: 10px; /* Zaokruženi ivice ikona */
+    transition: background-color 0.3s ease, border-color 0.3s ease; /* Glatka tranzicija za hover */
+    cursor:pointer;
+}
+
+/* Hover efekat za obe ikone */
+.phone:hover, .message:hover {
+    background-color: #007bff;
+    border-color: darkgray;
+}
+
+
+
+
+.video-call-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+/* Video area */
+.video-area {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.user-video, .partner-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Controls */
+.controls {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.control-btn {
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: #000;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.control-btn:hover {
+    background: rgba(255, 255, 255, 1);
+}
+
+.end-call {
+    background: #e74c3c;
+    color: white;
+}
+
+.end-call:hover {
+    background: #c0392b;
+}
+
+
+.hidden {
+    display: none;
+}
+
+
+
+
+
+.picbackground {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    z-index: 10;
+    text-align: center;
+    padding: 20px;
+}
+
+.conectChat {
+    border-radius: 50%;
+    border: 3px solid rgb(86, 86, 86); 
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+
+
+
+
+.conectChat.story-active {
+    animation: pulse 1s infinite ,growBorder 1s infinite alternate ;
+    border: 3px solid rgba(226, 51, 147, 0.985);
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+
+@keyframes growBorder {
+    0% {
+        transform: scale(1);
+        border-width: 2px;
+    }
+    50% {
+        transform: scale(1.1); /* Lagano uvećanje */
+        border-width: 4px;    /* Deblji border */
+    }
+    100% {
+        transform: scale(1);
+        border-width: 2px;
+    }
+}
+
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 10px rgba(4, 0, 255, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(4, 0, 255, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 10px rgba(4, 0, 255, 0.5);
+    }
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 20;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content{
+    width: 80% !important;
+    height: 600px;
+    background-color: rgba(0, 0, 0, 0.8)!important;
+
+}
+
+.modal-content img {
+    max-width: 90%;
+    max-height: 70%;
+    margin: auto;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 10px;
+    background-color: rgba(0, 0, 0, 0.8)!important;
+}
+
+.modal-header .close {
+    cursor: pointer;
+    font-size: 30px;
+    color: #007bff;
+    
+
+}
+
+.modal-header .delete {
+    cursor: pointer;
+    font-size: 20px;
+    position: absolute;
+    right: 15px;
+    top: 25px;
+    color: #007bff;
+}
+
+
+
+
+
+
+@media (max-width: 500px) {
+
+    html, body {
+        margin: 0; 
+        padding: 0; 
+        overflow-x: hidden; 
+        width: 100%; 
+        box-sizing: border-box; 
+        
+    }
+
+
+    header {
+        height: auto; /* Prilagođava visinu headera */
+        padding: 20px 0; /* Dodaje prostor iznad i ispod */
+    }
+
+
+    
+    header h1 {
+        font-size: 24px; /* Manji font za naslov */
+        padding-top: 20px;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+
+
+
+    header .logo {
+        position: relative; /* Omogućava centriranje */
+        left: 0; /* Resetuje prethodnu poziciju */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    header span {
+        font-size: 18px; /* Manji font za mobilne uređaje */
+        text-align: center;
+    }
+
+    header svg {
+        height: 50px; /* Manji logo za mobilne uređaje */
+        margin-left: 0;
+    }
+
+    header #singinButton {
+        position: absolute;
+        right: 10px; /* Ostaje desno sa strane */
+        top: 20px;
+        width: auto; /* Uklanja širinu 100% */
+        padding: 8px 15px; /* Prilagođava veličinu dugmeta */
+        font-size: 14px; /* Manji font za mobilne uređaje */
+        margin-right:10px ;
+    }
+
+    .search-container input {
+        width: 300px;
+        font-size: 14px;
+    }
+
+    .search-container button {
+        padding: 10px;
+        width: 30%; /* Zauzima preostalih 20% */
+    }
+
+
+    /* Story button */
+    .story {
+        background-image: url('Images/camera.png');
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        width: 3rem;
+        height: 3rem;
+        background-size: cover;
+        background-position: center;
+        z-index: 10;
+        cursor: pointer;
+        border: 2px solid rgba(255, 255, 255, 0.8);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        border-radius: 50%;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .story:hover {
+        transform: scale(1.1);
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Background overlay */
+    .picbackground {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        display: none; /* Initially hidden */
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 100;
+    }
+
+    .picbackground.show {
+        display: flex; /* Show when class is added */
+    }
+
+    /* Close (X) button */
+    .x {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 16px;
+        font-weight: bold;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.6);
+        width: 30px;
+        height: 30px;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        border: 2px solid rgba(239, 239, 239, 0.8);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .x:hover {
+        background-color: rgba(255, 0, 0, 0.8);
+        transform: scale(1.2);
+    }
+
+    /* Title */
+    .title {
+        font-size: 24px;
+        color: white;
+        font-weight: bold;
+        margin-bottom: 20px;
+        text-align: center;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+    }
+
+    /* Options */
+    .option {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 15px 0;
+    }
+
+    .label {
+        font-size: 20px;
+        color: white;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+
+
+    #camera, #gallery {
+        width: 100px;
+        height: 100px;
+        border: 3px solid rgba(255, 255, 255, 0.6);
+        background-size: cover;
+        background-position: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    #camera {
+        background-image: url('Images/camera.png');
+        margin-top: 5px;
+        margin-bottom: 20px;
+    }
+
+    #gallery {
+        background-image: url('Images/gallery.png');
+    }
+
+
+    #camera:hover, #gallery:hover {
+        transform: scale(1.1);
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
+    }
+        
+        
+
+
+    .MyAccount{
+        right: 20px;
+        top: 20px;
+       
+    }
+
+
+    .options-container {
+     bottom: 140px;
+     left: 60px;
+     width: 100%;
+    }
+    
+    .options {
+        z-index: 999;
+        width:100%;
+        background-color: slategray;
+        border: 2px solid grey;
+        border-radius: 10px;
+        overflow: hidden;
+        transition: opacity 0.5s ease, max-height 0.5s ease;
+    }
+    
+    .options.show {
+        opacity: 1;
+        max-height: 500px;
+    }
+    
+    .options li {
+        font-size: larger;
+        padding: 10px;
+        color: white;
+        border-bottom: 1px solid grey;
+    }
+    
+    .options li.open:hover {
+        background-color: rgb(182, 176, 176);
+        border-radius: 20px;
+        cursor: pointer;
+    }
+    
+    .options li.profile {
+        border-radius: 50%;
+        border: 3px solid rgb(40, 40, 224);
+        width: 70px;
+        height: 70px;
+        margin: auto;
+        margin-top: 10px;
+    }
+
+    .options li.profile img{
+        width: 70px;
+        height: 70px;
+
+    }
+    
+    .options li a {
+        color: white;
+        text-decoration: none;
+        display: block;
+    }
+    
+    .options li a:hover {
+        background-color: rgb(182, 176, 176);
+        border-radius: 20px;
+    }
+
+    
+    .conectChat {
+        border-radius: 50%;
+        border: 3px solid rgb(86, 86, 86); 
+        width: 80px;
+        height: 80px;
+        position: absolute;
+        top: 15px;
+        left: 15px;
+    }
+
+    .icon-container {
+        display: flex;
+        gap: 20px; /* Razmak između ikona */
+        margin-right: 20px; /* Doda razmak između ikona i desnog kraja */
+        margin-top: 80px;
+    }
+    
+    .phone, .message {
+        font-size: 20px; 
+        width: 40px !important; /* Širina ikone */
+        height: 40px!important; /* Visina ikone */
+        
+        
+    }
+    
+    
+
+  
+
+}

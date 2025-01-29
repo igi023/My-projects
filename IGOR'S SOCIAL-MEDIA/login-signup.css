@@ -1,0 +1,362 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+   
+}
+
+.container {
+    background-color: #f2f4f7;
+    min-height: 100vh; 
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.container .logo {
+    width: 140px;
+    height: 140px;
+    margin-bottom: 20px; 
+}
+
+.container h2 {
+    padding: 0 10px;
+    border: 4px solid black;
+    border-radius: 20px;
+    margin-top: 20px; 
+}
+
+.mainWrapper {
+    width: 100%;
+    max-width: 400px;
+    margin-top: 20px; 
+    padding: 20px;
+    border: 5px solid #ddd;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#loginForm h3 {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#loginForm div {
+    margin-bottom: 20px;
+}
+
+#loginForm label {
+    display: block;
+    font-size: 18px;
+    color: black;
+    margin-bottom: 5px;
+}
+
+#loginForm input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    outline: none;
+}
+
+
+#loginForm input:focus{         
+    border: 3px solid #1877F2 ;
+
+}
+
+
+
+#loginForm button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #1877F2;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#loginForm button:hover {
+    background-color: #165dbb;
+}
+
+
+.NoAccount a{
+    margin: 0 10px;
+    color: #1877F2;
+    font-size: px;
+
+}
+
+
+
+.signupBackground {
+    background-color: #f2f4f7;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10; 
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.customModal {
+    position: relative;
+    padding: 50px;
+    width: 100%;
+    max-width: 900px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.5);
+    margin: auto;
+}
+
+.customModal button#closeModal {
+    height: 20px!important;
+    width: 20px!important;
+    color: black;
+    border: none;
+    background-color: transparent;
+    font-size: 20px!important;
+    font-weight: bold;
+    position: absolute;
+    right: 20px !important;
+    top: 20px !important;
+    cursor: pointer;
+}
+
+#registrationForm {
+    width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+#registrationForm h3 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.form-group {
+    flex: 1;
+    min-width: 300px;
+}
+
+#registrationForm label {
+    display: block;
+    font-size: 16px;
+    color: black;
+    margin-top: 20px;
+}
+
+.gender-selection {
+    display: flex;
+    align-items: center; /* Vertikalno centriranje */
+    gap: 20px; /* Razmak između opcija */
+    margin-top: 10px; 
+}
+
+.gender-selection div {
+    display: flex; /* Osigurava da input i label stoje u jednoj liniji */
+    align-items: center;
+    gap: 5px; /* Razmak između inputa i labela */
+}
+
+.gender-selection input[type="radio"] {
+    margin: 0; /* Uklanja dodatne margine */
+    width: auto; /* Sprečava rastezanje */
+    height: auto; 
+}
+
+.gender-selection label {
+    margin: 0;
+    font-size: 16px; /* Uskladi veličinu fonta */
+}
+
+#registrationForm input {
+    margin-bottom: 5px;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    outline: none;
+}
+
+#registrationForm input:focus {
+    border: 2px solid #1877F2;
+}
+
+.languages {
+    position: relative;
+    bottom: 20px;
+    width: 100%; /* Adjust based on your layout */
+    max-width: 300px; /* Adjust as needed */
+}
+
+.language-selection {
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(117, 117, 117);
+    border: 1px solid #4f4f4f;
+    border-radius: 4px;
+    font-size: 16px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    outline: none;
+    margin-top: 25px;
+}
+
+.language-selection:focus {
+    border-color: #555;
+}
+
+datalist {
+    text-align: center;
+}
+
+.error-message {
+    color: red;
+}
+
+#signupButton {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#signupButton button {
+    width: 50%;
+    padding: 15px;
+    font-size: 18px;
+    background-color: #1877F2;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#signupButton button:hover {
+    background-color: #165dbb;
+}
+
+
+
+
+@media (max-width: 500px) {
+    .customModal {
+        padding: 15px;
+        max-width: 90%;
+        margin: 20px auto;
+        box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.8);
+        max-height: 80vh; /* Ograničava visinu modala */
+        overflow-y: auto; /* Omogućava skrolovanje kada je potrebno */
+    }
+
+    .customModal button#closeModal {
+        height: 30px;
+        width: 30px;
+        font-size: 24px;
+        right: 10px;
+        top: 10px;
+    }
+
+    #registrationForm {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .form-group {
+        min-width: unset;
+        width: 100%;
+    }
+
+    .gender-selection {
+        display: flex;
+        flex-direction: row; /* Poravnjaj elemente horizontalno na manjim ekranima */
+        justify-content: space-between; /* Prostor između elemenata */
+        margin-bottom: 15px;
+    }
+
+    .gender-selection label {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 14px; /* Manji font za bolje uklapanje */
+    }
+
+
+
+    .language-selection {
+        margin-top: 20px;
+    }
+
+    .language-selection .toggle-label {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    .languages-content {
+        max-height: 150px;
+        padding: 10px;
+        overflow-y: auto;
+    }
+
+    .languages-content label {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 14px; /* Manji font za bolje uklapanje */
+    }
+
+
+    #signupButton button {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    .error-message {
+        font-size: 13px;
+    }
+}
+
+

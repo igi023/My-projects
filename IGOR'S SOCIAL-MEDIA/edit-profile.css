@@ -1,0 +1,265 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body{
+    background-color: rgb(230, 235, 230) !important;
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    height: 100%; 
+    width: 100vw; 
+    overflow-y: auto;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+   
+
+}   
+
+
+ .logo{
+    position: absolute;
+    left: 30px;
+
+}
+
+
+ span{
+    font-size: 20px;
+}
+
+ svg{
+    height: 50px;
+    display: block;
+    margin-left: 15px;
+
+}
+
+
+
+    
+.editprofile {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.profilepic {
+    width: 150px;
+    height: 150px;
+    
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+    object-fit: cover;
+}
+
+#file-upload {
+    pointer-events: none; 
+    opacity: 0; 
+    position: absolute; 
+}
+
+
+#message {
+    position: absolute; /* Da poruka stoji iznad elemenata */
+    top: 10px; /* Podešavanje položaja */
+    left: 80%; /* Centriranje */
+    transform: translateX(-50%); /* Da poravnanje bude tačno po sredini */
+    padding: 10px 20px; /* Unutrašnja margina za bolji izgled */
+    background-color: #f0f8ff; /* Svetloplava pozadina */
+    color: #333; /* Tamna boja teksta */
+    border: 2px solid #4caf50; /* Zelena ivica */
+    border-radius: 8px; /* Zaobljeni uglovi */
+    font-size: 16px; /* Veličina fonta */
+    font-weight: bold; /* Podebljani tekst */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Blaga senka */
+    z-index: 1000; /* Da se poruka nalazi iznad svih elemenata */
+    display: none;
+    }
+
+.profilepic img {
+    object-fit: cover;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    background-color: gray;
+    
+}
+
+.edit-text {
+    cursor: pointer;
+    color: #3897f0;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.edit-popup {
+    display: none;
+    position: absolute;
+    top: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    z-index: 1000;
+}
+
+.edit-popup ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.edit-popup li {
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.edit-popup li:hover {
+    background-color: #f0f0f0;
+}
+
+.icon-upload::before {
+    content: '\1F4E4'; /* Unicode for upload icon */
+    margin-right: 10px;
+}
+
+.icon-remove::before {
+    content: '\1F5D1'; /* Unicode for trash icon */
+    margin-right: 10px;
+}
+
+
+#edit-profile-form {
+    margin: auto;
+    margin-top: 50px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    max-width: 90%;
+    text-align: left;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.form-group input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.form-group .edit-label {
+    color: #007bff;
+    cursor: pointer;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.form-group .edit-label:hover {
+    color: #0056b3;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+
+.password-field {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 50px;
+    cursor: pointer;
+    font-size: 1.2em;
+    user-select: none;
+}
+
+.edit-label {
+    margin-left: 10px;
+    cursor: pointer;
+    color: blue;
+    text-decoration: underline;
+    user-select: none;
+}
+
+
+/*css for myaccount js*/
+
+.custom-account-info {
+    font-size: 20px; 
+    color: blue;     
+    font-weight: bold; 
+}
+
+
+
+@media (max-width: 500px) {
+
+    .logo{
+        position: absolute;
+        left:0px;
+        height:10px ;
+        width:10px ;
+    
+    }
+
+    span{
+        margin-left: 8px;
+        font-size: 15px ;
+    }
+    
+     svg{
+        height: 50px;
+        display: block;
+        margin-left: 20px;
+    }
+    
+    
+
+    
+
+    #message {
+        position: absolute; /* Da poruka stoji iznad elemenata */
+        top: 20px; /* Podešavanje položaja */
+        left: 60%; /* Centriranje */
+    }
+    
+
+
+
+
+
+
+}

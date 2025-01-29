@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="mainpage.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <title>CHATTTER-BOX</title>
+</head>
+
+<body>
+   <header>
+        <div class="logo">
+            <span style="color: #3dd2e2;">Chatter</span><span style="color: #ff1493;">Box</span>
+            <a href="mainpage.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><defs><style>.cls-1{fill:#6fabe6}.cls-2{fill:#82bcf4}.cls-3{fill:#db5669}.cls-4{fill:#f26674}.cls-7{fill:#f6ccaf}.cls-8{fill:#ffdec7}.cls-11{fill:#edebf2}</style></defs><g id="Convertasion"><path class="cls-1" d="M42 4v15l-5-2H27a3 3 0 0 1-3-3V4a3 3 0 0 1 2-2.82C26.66.92 26 1 39 1a3 3 0 0 1 3 3z"/><path class="cls-2" d="M42 4v11H30a4 4 0 0 1-4-4V1.18A2.77 2.77 0 0 1 27 1h12a3 3 0 0 1 3 3z"/><path class="cls-3" d="M24 6c0 10.73.07 10.34-.18 11A3 3 0 0 1 21 19H11l-5 2V6a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3z"/><path class="cls-4" d="M24 6c0 10.73.07 10.34-.18 11H12a4 4 0 0 1-4-4V3.18A2.77 2.77 0 0 1 9 3h12a3 3 0 0 1 3 3z"/>
+            <path d="M43 30v9.54H29V30a7 7 0 1 1 14 0z" style="fill:#a87e6b"/><path d="M43 30v9.54H31V30a7 7 0 0 1 6-6.92A7 7 0 0 1 43 30z" style="fill:#be927c"/><path class="cls-3" d="M41 39a4 4 0 0 1 4 4v4H27v-4a4 4 0 0 1 4-4z"/><path class="cls-4" d="M45 43v2H31a2 2 0 0 1-2-2c0-1.32-.11-2.65 1.28-3.93C30.84 39 41.1 39 41 39a4 4 0 0 1 4 4z"/><path class="cls-1" d="M21 43v4H3v-4a4 4 0 0 1 3.28-3.93C6.78 39 6.56 39 17 39a4 4 0 0 1 4 4z"/><path class="cls-2" d="M21 43v2H7a2 2 0 0 1-2-2c0-1.32-.11-2.65 1.28-3.93C6.84 39 17.1 39 17 39a4 4 0 0 1 4 4z"/><path class="cls-7" d="M16 29c0 3.62.36 5.41-1.28 6.93A4 4 0 0 1 8 33v-4z"/><path class="cls-8" d="M16 29c0 3.62.36 5.41-1.28 6.93A4 4 0 0 1 10 32v-3z"/><path d="M16 27v2H8c0-2.24.1-1.78-1-4h7a2 2 0 0 1 2 2z" style="fill:#374f68"/><path d="M16 27H9.91A10.39 10.39 0 0 0 9 25h5a2 2 0 0 1 2 2z" style="fill:#425b72"/><path class="cls-7" d="M40 30c-.56 3.93-.49 4.93-1.55 6a3.45 3.45 0 0 1-5.87-2L32 30a3.25 3.25 0 0 0 3-2 6.84 6.84 0 0 0 5 2z"/><path class="cls-8" d="M40 30c-.56 3.93-.49 4.93-1.55 6a3.46 3.46 0 0 1-3.87-3c-.77-5.33-.72-2.85.42-5a6.84 6.84 0 0 0 5 2z"/><path class="cls-7" d="M38 36.36V39l-2 2-2-2v-2.64h4zM14 36.46V39l-2 2-2-2v-2.54h4z"/><path class="cls-8" d="M14 36.46V39l-1.5 1.5L11 39v-2.54h3zM38 36.36v2.54l-1.5 1.5-1.5-1.5v-2.54h3z"/>
+            <path class="cls-11" d="M20 8H10a1 1 0 0 1 0-2h10a1 1 0 0 1 0 2zM20 16H10a1 1 0 0 1 0-2h10a1 1 0 0 1 0 2zM20 12H10a1 1 0 0 1 0-2h10a1 1 0 0 1 0 2zM38 6H28a1 1 0 0 1 0-2h10a1 1 0 0 1 0 2zM38 14H28a1 1 0 0 1 0-2h10a1 1 0 0 1 0 2zM38 10H28a1 1 0 0 1 0-2h10a1 1 0 0 1 0 2z"/></g></svg></a>
+        </div> 
+
+        <div class="story" onclick="showStory()"></div>
+
+        <div class="picbackground">
+            <p class="x" onclick="hideStory()">X</p>
+            <p class="title">STORY PHOTO</p>
+            <hr>
+            <div class="option">
+                <p class="label">Take a photo</p>
+                <input 
+                    type="file" 
+                    accept="image/*" 
+                    capture="environment" 
+                    id="camera-input" 
+                    style="display: none;" 
+                    onchange="handleFileSelect(event)"
+                />
+                <div id="camera" class="camera" onclick="document.getElementById('camera-input').click()"></div>
+            </div>
+            <div class="option">
+                <p class="label">Choose from gallery</p>
+                <input 
+                    type="file" 
+                    accept="image/*" 
+                    id="gallery-input" 
+                    style="display: none;" 
+                    onchange="handleFileSelect(event)"
+                />
+                <div id="gallery" class="gallery" onclick="document.getElementById('gallery-input').click()"></div>
+            </div>
+        </div>
+                
+
+        
+        <div>
+            <a class="SinginButton" id="singinButton" href="login-signup.html">SIGN IN<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="20" height="20">
+                <path fill="#2d3e50" d="M64.008 1.63A62.35 62.35 0 0 0 27.765 114.73c.774.564 1.564 1.096 2.37 1.628a62.31 62.31 0 0 0 67.746 0c.79-.516 1.564-1.048 2.338-1.612A62.35 62.35 0 0 0 64.008 1.63ZM98.704 96.898a7.438 7.438 0 0 0-3.854-4.676c-6.965-3.466-22.266-8.609-22.266-8.609v-5.046l.419-.322a14.645 14.645 0 0 0 5.562-9.287l.081-.532h.419a5.669 5.669 0 0 0 5.224-3.515 6.166 6.166 0 0 0 .758-2.982 5.754 5.754 0 0 0-.387-2.096 3.002 3.002 0 0 0-1.145-1.822l-1.863-1.626.355-1.532c2.547-11.108-6.062-21.12-17.622-21.394-.29-.016-.564-.016-.838-.016s-.564 0-.838.016c-11.56.274-20.169 10.286-17.622 21.394l.355 1.532-1.419.855a2.911 2.911 0 0 0-1.129 1.822 5.769 5.769 0 0 0-.403 2.096 6.181 6.181 0 0 0 .774 2.983 5.652 5.652 0 0 0 5.224 3.515h.403l.097.532a14.623 14.623 0 0 0 5.546 9.287l.419.322v5.046s-15.284 5.143-22.265 8.609a7.414 7.414 0 0 0-3.837 4.676 47.851 47.851 0 1 1 69.39 0Z"/>
+                </svg>
+            </a>
+
+        </div>
+   
+
+            <button class="MyAccount" onclick="toggleMyProfile()">MY ACCOUNT</button>
+
+            <div class="options-container">
+                <ul class="options">
+                    <li class="profile">
+                        <p class='out' onclick="hideMyProfile()">X</p>
+                        <img src="Images/maleuser.png" alt="Profile Picture" id="profile-li-picture" class="profile-li-img">
+                    </li>
+                    <hr>
+                    <li class="username" id="account-username">Username: <span class="dynamic-content"></span></li>
+                    <hr>
+                    <li class="useremail" id="account-email">Email: <span class="dynamic-content"></span></li>
+                    <hr>
+                    <li><a class="myprofile open" href="edit-profile.html">My Profile</a></li>
+                    <hr>
+                    <li class="deleteaccount open" id="deleteaccount">Delete Account</li>
+                    <hr>
+                    <li class="logout open">Logout</li>
+                </ul>
+            </div>
+
+
+       
+
+      
+        <h1>Meet and connect with new people all around the world</h1>
+   </header>
+
+
+    <div class="searchePart">
+        <div id="search" class="search-container">
+            <input id="input" type="text" placeholder="Search for Languages,Username...">
+            <button>
+                <svg class="feather feather-search" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="11" cy="11" r="8"/><line x1="21" x2="16.65" y1="21" y2="16.65"/></svg>
+            </button>
+        </div>
+
+        <div class="Gender">
+           <div id="male" class="male"><?xml version="1.0" ?><svg  viewBox="0 0 512 512"  xmlns="http://www.w3.org/2000/svg"><title/><path d="M442,48H352a22,22,0,0,0,0,44h36.89L328.5,152.39c-68.19-52.86-167-48-229.54,14.57h0C31.12,234.81,31.12,345.19,99,413A174.21,174.21,0,0,0,345,413c62.57-62.58,67.43-161.35,14.57-229.54L420,123.11V160a22,22,0,0,0,44,0V70A22,22,0,0,0,442,48ZM313.92,381.92a130.13,130.13,0,0,1-183.84,0c-50.69-50.68-50.69-133.16,0-183.84s133.16-50.69,183.84,0S364.61,331.24,313.92,381.92Z"/></svg></div>
+           <div id="female" class="female"><?xml version="1.0" ?><svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg"><rect fill="none" /><path d="M208,96a80,80,0,1,0-88,79.6V200H88a8,8,0,0,0,0,16h32v24a8,8,0,0,0,16,0V216h32a8,8,0,0,0,0-16H136V175.6A80.1,80.1,0,0,0,208,96ZM64,96a64,64,0,1,1,64,64A64.1,64.1,0,0,1,64,96Z"/></svg></div>   
+        </div>
+
+
+        <div class="languages">
+            <span>All</span>
+            <span>English</span>
+            <span>Spanish</span>
+            <span>Hungarian</span>
+            <span>Serbian</span>
+            <span>French</span>
+            <span>Russian</span>
+            <span>Japanese</span>
+            <span>Chinese</span>
+            <span>Arabic</span>
+            <span>German</span>
+            <span>Dutch</span>
+            <span>Mandarin</span>
+            <span>Hindi</span>
+            <span>Bengali</span>
+            <span>Portuguese</span>
+            <span>Urdu</span>
+            <span>Indonesian</span>
+        </div>
+
+    </div>
+
+        <div class="userPart" id="userpart">
+            <img 
+                src="Images/maleuser.png" 
+                alt="profileimg" 
+                class="conectChat" 
+                id="conectChat" 
+                onclick="showStoryImage()"
+            />
+            <div class="icon-container">
+                <div class="phone" id="start-call">
+                    <i class="fa-solid fa-phone"></i>
+                </div>
+                <div class="message">
+                    <i class="fa-solid fa-message"></i>
+                </div>
+            </div>
+            
+            <div class="video-call-container hidden" id="video-call">
+                <div class="video-area">
+                    <video class="user-video" autoplay muted></video>
+                    <video class="partner-video" autoplay></video>
+                </div>
+                <div class="controls">
+                    <button class="control-btn" id="mute-btn"><i class="fa-solid fa-microphone-slash"></i></button>
+                    <button class="control-btn" id="hide-video-btn"><i class="fa-solid fa-video-slash"></i></button>
+                    <button class="control-btn end-call" id="end-call-btn"><i class="fa-solid fa-phone-slash"></i></button>
+                </div>
+            </div>
+ 
+
+
+
+
+    <!-- Modal for Enlarged Image -->
+    <!-- Modal for Story Image -->
+    <div class="modal" id="storyModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <p class="close" onclick="closeStoryImage()">X</p>
+                <p class="delete" onclick="deleteStory()">DELETE</p> <!-- Tri tačke za brisanje -->
+            </div>
+            <img id="storyImage" alt="story image" />
+        </div>
+    </div>
+
+    
+
+
+
+<script src="js/Myaccount.js"></script>
+<script src="js/mainpage.js"></script>
+<script src="js/Session.js"></script>
+<script src="js/editprofile.js"></script>
+<script src="js/Users.js"></script>
+</body>
+
